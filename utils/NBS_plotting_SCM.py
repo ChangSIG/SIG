@@ -159,10 +159,9 @@ def cluster_KMplot(cluster_assign, clin_data_fn, cancer_type, delimiter='\t', lr
                            event_observed=np.array(cluster_survivals.vital_status)).p_value
         if verbose:
             print('Multi-Class Log-Rank P:', p)
-        # plt.title(title, fontsize=24, y=1.02)
-        # plt.title(title + '\np=' + repr(round(p, 5)) + '   SCM avg=' + repr(round(SCM_avg, 4)), fontsize=20, y=1.02)
-    # else:
-        # plt.title(title, fontsize=24, y=1.02)
+        plt.title(title + '\np=' + repr(round(p, 5)) + '   SCM avg=' + repr(round(SCM_avg, 4)), fontsize=20, y=1.02)
+    else:
+        plt.title(title, fontsize=24, y=1.02)
     # Save KM plot
     if 'outdir' in save_args:
         if 'job_name' in save_args:

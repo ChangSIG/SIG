@@ -17,9 +17,3 @@ print('job_name: ' + save_args['job_name'] + ':')
 # Plot KM Plot for patient clusters
 my_ov_cluster = plot.cluster_KMplot(OV_cluster_assign, OV_surv_data_path, cancer_type='OV', delimiter=',', **save_args)
 Image(filename=save_args['outdir'] + save_args['job_name'] + '_KM_plot.png', width=600, height=600)
-
-# true_label_path = '../Examples/Example_Data/processed_data/K4M90_Patient_Label_raw.txt'
-# true_label_path = '../Examples/Example_Data/processed_data/K4M90_filt_325.csv'
-# true_label = np.loadtxt(true_label_path, dtype=int)
-# ari = adjusted_rand_score(true_label, np.array(OV_cluster_assign))
-# print('ari:{:.4f}'.format(ari))
